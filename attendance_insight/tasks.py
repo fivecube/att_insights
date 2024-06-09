@@ -45,4 +45,4 @@ def save_student_info(name):
     if created:
         student.roll_no = student.id
         student.save(update_fields=['roll_no'])
-    return student
+    return student, student.roll_no
