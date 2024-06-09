@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "8121fb61-feeb-4370-a31e-4395df2a1fb2",
+		"name": "Attendance Analytics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18721378"
+	},
+	"item": [
+		{
+			"name": "attendance selector",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}attendance_insight/attendance_selector/?academic_days=10",
+					"host": [
+						"{{baseUrl}}attendance_insight"
+					],
+					"path": [
+						"attendance_selector",
+						""
+					],
+					"query": [
+						{
+							"key": "academic_days",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attendance selector",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Harsh Gill\",\n    \"selected_way_to_attend_class\": [\"P\", \"P\", \"P\", \"P\", \"P\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}attendance_insight/attendance_selector/",
+					"host": [
+						"{{baseUrl}}attendance_insight"
+					],
+					"path": [
+						"attendance_selector",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attendance tracker dropdown",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}attendance_insight/attendance_tracker_dropdown/",
+					"host": [
+						"{{baseUrl}}attendance_insight"
+					],
+					"path": [
+						"attendance_tracker_dropdown",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attendance tracker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/attendance_insight/attendance_tracker/?roll_no=2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"attendance_insight",
+						"attendance_tracker",
+						""
+					],
+					"query": [
+						{
+							"key": "roll_no",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
