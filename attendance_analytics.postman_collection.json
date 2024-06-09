@@ -37,7 +37,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Harsh Gill\",\n    \"selected_way_to_attend_class\": [\"P\", \"P\", \"P\", \"P\", \"P\"]\n}",
+					"raw": "{\n    \"name\": \"Mohit Chouhan\",\n    \"selected_way_to_attend_class\": [\"A\", \"P\", \"P\", \"P\", \"P\"]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -81,12 +81,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/attendance_insight/attendance_tracker/?roll_no=2",
+					"raw": "{{baseUrl}}attendance_insight/attendance_tracker/?roll_no=2",
 					"host": [
-						"{{baseUrl}}"
+						"{{baseUrl}}attendance_insight"
 					],
 					"path": [
-						"attendance_insight",
 						"attendance_tracker",
 						""
 					],
