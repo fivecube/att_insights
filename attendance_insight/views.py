@@ -36,7 +36,7 @@ class AttendanceSelectorView(APIView):
         data = request.data
         selected_way_to_attend_class = data.get('selected_way_to_attend_class')
         name = data.get('name')
-        student = save_student_info(name)
+        student, roll_no = save_student_info(name)
         AttendanceTracker.objects.filter(student=student).delete()
         for day_number_index, day_status in enumerate(selected_way_to_attend_class):
             print(day_status, day_number_index)
@@ -52,7 +52,8 @@ class AttendanceSelectorView(APIView):
                 status=status
             )
         return Response({
-            'success': True
+            'success': True,
+            'roll_no': roll_no
         })
 
 
